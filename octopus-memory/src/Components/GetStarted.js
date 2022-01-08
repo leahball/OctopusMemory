@@ -14,15 +14,16 @@ const StartContentMain = styled.div`
 const SideBar = styled.div`
   background-color: ${lightRed};
   flex: 0 auto;
-  width: 35%;
+  width: 48%;
   text-align: right;
-  padding: 10% 0 0 10%;
+  padding: 10% 0 0 15%;
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 1.5;
     color: ${darkInk};
     font-family: "Rubik", sans-serif;
     font-weight: 400;
+    font-style: italic;
     margin-bottom: 10%;
   }
 `;
@@ -32,9 +33,13 @@ const Button = styled.button`
   background-color: ${midOcean};
   color: white;
   padding: 3% 8%;
-  font-size: 2rem;
+  margin: 2%;
+  font-size: 3rem;
+  font-family: "Rubik";
+  font-weight: 700;
   border: 1px solid white;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 `;
 

@@ -7,12 +7,13 @@ const NavbarStyled = styled.header`
   background-color: ${lightRed};
   position: fixed;
   width: 60%;
-  padding: 10px 20px;
+  padding: 10px 30px;
 `;
 
 const HeaderLogo = styled(Logo)`
   text-align: left;
   color: ${midOcean};
+  font-size: 5rem;
 `;
 
 export function Header() {
