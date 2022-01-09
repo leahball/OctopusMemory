@@ -1,22 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-import { lightRed, midOcean, darkInk } from "../Theme/Colors";
+import { lightRed, midOcean, darkOcean, darkInk } from "../Theme/Colors";
 
 const StartContentMain = styled.div`
-  height: 800px;
+  height: 670px;
   background-image: url("Assets/Images/Closeup.png");
-  background-color: ${lightRed};
-  background-size: cover;
-  flex: 1;
-  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+  position: relative;
+  z-index: 10;
+  top: -550px;
+  @media only screen and (max-width: 420px) {
+    height: 800px;
+    top: -680px;
+    right: -80px;
+  }
+  @media only screen and (max-width: 800px) {
+    /* height: 740px; */
+    background-size: 70%;
+  }
 `;
 
 const SideBar = styled.div`
-  background-color: ${lightRed};
-  flex: 0 auto;
-  width: 48%;
+  position: relative;
+  z-index: 30;
+  width: 38%;
+  margin-left: 10%;
+  padding-top: 5%;
   text-align: right;
-  padding: 10% 0 0 15%;
   h2 {
     font-size: 3rem;
     line-height: 1.5;
@@ -25,6 +37,20 @@ const SideBar = styled.div`
     font-weight: 400;
     font-style: italic;
     margin-bottom: 10%;
+    background-color: rgba(254, 242, 239, 0.75);
+    border-radius: 20px;
+    padding: 4%;
+  }
+  @media only screen and (max-width: 420px) {
+    padding-top: 10%;
+    width: 80%;
+    position: relative;
+    z-index: 30;
+    text-align: left;
+    h2 {
+      font-size: 2.8rem;
+      z-index: 1;
+    }
   }
 `;
 
@@ -41,11 +67,21 @@ const Button = styled.button`
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  a:hover {
+    background-color: ${darkOcean};
+  }
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
+  position: relative;
+  background-color: ${lightRed};
+  height: 580px;
+  @media only screen and (max-width: 420px) {
+    height: 800px;
+  }
+  @media only screen and (max-width: 800px) {
+    height: 800px;
+  }
 `;
 
 const GetStarted = () => {

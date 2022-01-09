@@ -3,23 +3,24 @@ import styled from "styled-components";
 import { lightRed, midOcean } from "../Theme/Colors";
 import { Logo } from "../Theme/Logo";
 
-const NavbarStyled = styled.header`
-  position: relative;
-  z-index: -100;
-  background-color: ${lightRed};
-  padding: 10px 30px; */
+const NavbarStyled = styled.footer`
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background-color: ${midOcean};
+  padding: 15px 40px;
 `;
 
 const HeaderLogo = styled(Logo)`
   text-align: left;
-  color: ${midOcean};
-  font-size: 5rem;
+  color: ${lightRed};
+  font-size: 2rem;
 `;
 
-export function Header() {
+export function Footer() {
   return (
     <NavbarStyled>
-      <HeaderLogo>Octopolis</HeaderLogo>
+      <HeaderLogo>created by Leah Ball</HeaderLogo>
     </NavbarStyled>
   );
 }
